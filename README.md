@@ -14,3 +14,5 @@ To build, simply:
 1. Runs `npm install` to install dependencies.
 2. Runs `npm test` to run Mocha and execute the unit tests.
 
+
+[![Build Status](https://dev.azure.com/SergeyDevTest/TestProject/_apis/build/status/sergeykrulikovskiy.calculator?branchName=master)](https://dev.azure.com/SergeyDevTest/TestProject/_build/latest?definitionId=18&branchName=master)
