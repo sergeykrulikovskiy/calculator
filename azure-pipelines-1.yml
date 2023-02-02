@@ -25,7 +25,7 @@ jobs:
     - task: InlinePowershell@1
       displayName: Get ENVs
       inputs:
-        Script: set
+        Script: 'Get-Item c:\pkg'
 
 - job: 
   displayName: "job 2 - run"
