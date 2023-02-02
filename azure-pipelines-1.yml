@@ -22,13 +22,10 @@ jobs:
         echo See https://aka.ms/yaml
       displayName: 'Run a multi-line script'
       
-    - task: CopyFiles@2
-      continueOnError: false
+    - task: InlinePowershell@1
+      displayName: Get ENVs
       inputs:
-        SourceFolder: c:\1
-        TargetFolder: c:\2
-        OverWrite: true
-        Contents: '**'
+        Script: set
 
 - job: 
   displayName: "job 2 - run"
