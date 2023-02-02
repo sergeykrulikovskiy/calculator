@@ -10,8 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 jobs:
-- job: runnnnn
-  displayName: "run wtf"
+- job: job1
+  displayName: "job1 - run"
   variables:
     testvar: "test var"
   cancelTimeoutInMinutes: 5
@@ -23,3 +23,14 @@ jobs:
         echo Add other tasks to build, test, and deploy your project.
         echo See https://aka.ms/yaml
       displayName: 'Run a multi-line script'
+- job: 
+  displayName: "job 2 - run"
+  dependsOn: job1
+  steps:
+    - task: Bash@3
+      displayName: Execute script
+      inputs:
+        targetType: inline
+        script: echo "job2 script"
+        
+      
