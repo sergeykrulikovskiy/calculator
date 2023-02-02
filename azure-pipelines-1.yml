@@ -10,6 +10,8 @@ jobs:
 - job: job1
   pool: Default
   displayName: "job1 - run"
+  workspace:
+    clean: all
   variables:
     testvar: "test var"
   cancelTimeoutInMinutes: 5
