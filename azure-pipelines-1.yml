@@ -5,10 +5,10 @@
 
 trigger:
 - master
-pool: Default
 
 jobs:
 - job: job1
+  pool: Default
   displayName: "job1 - run"
   variables:
     testvar: "test var"
@@ -30,6 +30,7 @@ jobs:
 - job: 
   displayName: "job 2 - run"
   dependsOn: job1
+  pool: Linux
   steps:
     - task: Bash@3
       displayName: Execute script
