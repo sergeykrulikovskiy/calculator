@@ -7,6 +7,10 @@ trigger:
 - master
 
 jobs:
+- job: no_checkout
+  steps:
+    - checkout: none
+
 - job: job1
   pool: Default
   displayName: "job1 - run"
@@ -15,6 +19,7 @@ jobs:
   variables:
     testvar: "test var"
   cancelTimeoutInMinutes: 5
+  dependsOn: no_checkout
   steps:
     - script: echo Hello, world!
       displayName: 'Run a one-line script. Var: $(testvar)'
