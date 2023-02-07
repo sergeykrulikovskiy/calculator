@@ -17,7 +17,7 @@ jobs:
   cancelTimeoutInMinutes: 5
   steps:
     - checkout: self
-      path: $(Build.SourcesDirectory)\mytestpath
+      path: mytestpath
     - script: echo Hello, world!
       displayName: 'Run a one-line script. Var: $(testvar)'
 
