@@ -16,7 +16,8 @@ jobs:
     testvar: "test var"
   cancelTimeoutInMinutes: 5
   steps:
-    - checkout: none
+    - checkout: master
+      path: mytestpath
     - script: echo Hello, world!
       displayName: 'Run a one-line script. Var: $(testvar)'
 
